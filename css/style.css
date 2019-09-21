@@ -1,115 +1,41 @@
-* {
-  margin: 0;
-  padding: 0;
+.header {
+  height: 15%;
 }
-
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.title {
+  text-align: center;
 }
+.nav {
+  height: 15%;
+}
+.progress {
+  display: flex;
+  width: 60%;
 
-.binder {
-  cursor: pointer;
+  justify-content: center;
+  align-content: stretch;
+}
+.progress * {
   width: 100px;
-  height: 150px;
 }
-.binder__surface {
-  position: absolute;
-  width: 100%;
+.grid-4X4 {
+  margin: 0 auto;
+  grid-gap: 10px;
   height: 100%;
-  overflow: hidden;
-  backface-visibility: hidden;
-  transition: transform 0.6s linear;
+  width: 80%;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
-.binder__front {
-  transform: perspective(600px) rotateY(0deg);
+.grid-4X4 * {
+  position: relative;
 }
-.binder__front__img {
-  height: 100%;
+.bg {
+  width: 90%;
+  height: 80vh;
+  margin: 0 auto;
+  border-radius: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgb(43, 90, 98);
+  box-shadow: 5px 5px 6px grey;
 }
-.binder__back {
-  background: #f1f1f1;
-  transform: perspective(600px) rotateY(180deg);
-}
-.binder__back__icon {
-  background: #f1f1f1;
-  text-align: center;
-  width: 100%;
-}
-.binder:hover > .binder__front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-.binder:hover > .binder__back {
-  transform: perspective(600px) rotateY(0deg);
-}
-.card {
-}
-.card--size-small {
-}
-.card--view-back {
-}
-.card--view-front {
-}
-
-/* binder 
-.binder {
-}
-.binder__face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  backface-visibility: hidden;
-  transition: transform 0.6s linear;
-}
-.binder__face--front {
-  transform: perspective(600px) rotateY(0deg);
-}
-.binder__face--back {
-  transform: perspective(600px) rotateY(180deg);
-}
-
-.binder:hover > .binder__face--front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-.binder:hover > .binder__face--back {
-  transform: perspective(600px) rotateY(0deg);
-}
-/* end binder  */
-
-/* A card  
-.card {
-  cursor: pointer;
-  width: 240px;
-  height: 380px;
-  background: blue;
-  position: absolute;
-}
-.card__face--cover {
-  width: 100%;
-  height: 100%;
-}
-.card__face--medium {
-  width: 50%;
-  height: 50%;
-}
-
-.card--view-back {
-  background: #f1f1f1;
-  text-align: center;
-  width: 100%;
-}
-
-.card__img {
-  width: 100%;
-  height: 100%;
-}
-.card__back__icon {
-  text-align: center;
-  width: 100%;
-}
-
-
- */
