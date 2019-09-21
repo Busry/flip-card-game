@@ -38,4 +38,5 @@
   padding-bottom: 15px;
   background-color: rgb(43, 90, 98);
   box-shadow: 5px 5px 6px grey;
+  background-image: linear-gradient(rgb(77, 92, 77), rgb(120, 101, 129));
 }
