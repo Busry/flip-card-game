@@ -9,13 +9,15 @@
 }
 .progress {
   display: flex;
-  width: 60%;
-
+  width: 100%;
   justify-content: center;
   align-content: stretch;
 }
 .progress * {
-  width: 100px;
+  margin: 0 auto;
+}
+.progress__star {
+  display: flex;
 }
 .grid-4X4 {
   margin: 0 auto;
@@ -40,7 +42,23 @@
   border-radius: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
-  /* background-color: rgb(43, 90, 98); */
-  /* box-shadow: 5px 5px 6px grey; */
-  /* background-image: linear-gradient(rgb(119, 99, 99), rgb(120, 101, 129)); */
+}
+.end {
+  color: aliceblue;
+  width: 40%;
+  height: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 200px;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  border-radius: 15px;
+  background-color: rgba(134, 52, 52, 0.95);
+  border: 1px solid red;
+}
+.end-btn {
+  height: 50px;
+  width: 50px;
 }

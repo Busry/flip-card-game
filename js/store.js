@@ -48,20 +48,11 @@ $(document).ready(function() {
   $(".progress__restart").on("click", function() {
     location.reload();
   });
-  $(".end-btn").on("click", function() {
-    location.reload();
-  });
-
-  function restart() {
-    location.reload();
-  }
-  $(".end").hide();
   const cards = document.querySelectorAll(".card");
 
   let hasFlippedCard = false,
     lock = false;
-  let moves = 0;
-  let matchCount = 0;
+
   let firstCard, secondCard;
   function flipACard() {
     if (lock) {
@@ -78,29 +69,33 @@ $(document).ready(function() {
       return;
     }
     //second click
-    moves++;
-    $(".moves").text(`${moves}`);
     hasFlippedCard = false;
     secondCard = this;
     isMatch();
-  }
-  let count = 0;
-  function timer() {
-    $(".progress__timer").text(count);
-    count++;
-  }
-  function star(lent) {
-    for (let i = 0; i < lent; i++) {
-      $(".progress__star").html(`<i class="fas fa-star"></i>`);
-    }
-  }
-  let countId = window.setInterval(timer, 6000);
-  let matchCountId = window.setInterval(setStars, 1000);
-  function setStars() {
-    star(parseInt((matchCount / moves) * 5));
-    if (matchCount === 8) {
-      $(".end").show();
-    }
+
+    // $(this).addClass("flip");
+    // if ($isFirst) {
+    //   $secondCard = $(this);
+    //   let $isSimilar =
+    //     $(".front", $firstCard).attr("src") ===
+    //     $(".front", $secondCard).attr("src");
+    //   if ($isSimilar) {
+    //     $firstCard = null;
+    //     $secondCard = null;
+    //     $($firstCard).removeEventListener("click", flipACard);
+    //     $($secondCard).removeEventListener("click", flipACard);
+    //   } else {
+    //     setTimeout(function() {
+    //       $firstCard.removeClass("flip");
+    //       $secondCard.removeClass("flip");
+    //     }, 1300);
+    //   }
+    //   $isFirst = !$isFirst;
+    // } else {
+    //   $firstCard = $(this);
+    //   $secondCard = null;
+    //   $isFirst = !$isFirst;
+    // }
   }
   function isMatch() {
     let isSimilar =
@@ -113,7 +108,6 @@ $(document).ready(function() {
     firstCard.removeEventListener("click", flipACard);
     secondCard.removeEventListener("click", flipACard);
     resetBoard();
-    matchCount++;
   }
   function unflip() {
     lock = true;

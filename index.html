@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <script src="https://kit.fontawesome.com/cc761987a4.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/flipcard.css" />
     <link rel="stylesheet" href="./css/flip.css" />
     <link rel="stylesheet" href="./css/utility.css" />
+
     <title>chingu flipping Game</title>
   </head>
   <body>
@@ -18,16 +20,35 @@
       </header>
       <nav class="nav">
         <ul class="progress middle">
-          <li class="progress__star">Stars</li>
-          <li class="progress__timer">01:21</li>
-          <li class="progress__moves">8 moves</li>
-          <li class="progress__restart btn">Restart</li>
+          <li class="">
+            Stars<br />
+            <span class="progress__star"> </span>
+          </li>
+          <li>
+            Time<br />
+            <span class="progress__timer">0</span> mins
+          </li>
+          <li>
+            Moves<br />
+            <span class="moves">0</span> turns
+          </li>
+          <li class="progress__restart btn">
+            Restart
+          </li>
         </ul>
       </nav>
       <div class="bg">
         <main class="grid-4X4" id="grid"></main>
       </div>
     </article>
+    <div class="end">
+      <h5>Congratulation YOU'VE WON</h5>
+      <p>
+        <a href="https://github.com/Busry?tab=repositories">Visit my github</a>
+      </p>
+      <button class="end-btn">play again</button>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
